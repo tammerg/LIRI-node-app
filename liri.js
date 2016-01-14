@@ -1,3 +1,2 @@
-var items = 
-
-console.log(keys.js);
+var keys = require(".keys.js");
+console.log(keys)
