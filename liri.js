@@ -1,7 +1,8 @@
 
-var omdb = require("./api/movies.js")
-var twitter = require("./api/twitter.js")
-var command = process.argv[2];
+var omdb = require("./api/movies.js");
+var twitter = require("./api/twitter.js");
+var spotify = require("./api/spotify.js");
+var command = process.argv[2];       
 var searchQuery = []
 for (var i = 3; i < process.argv.length; i++) {
   searchQuery += " " + process.argv[i]};
@@ -23,11 +24,6 @@ switch(command) {
   case "movie":
   case "movie-this":
     result = movie(searchQuery);
-    break;
-
-  case "do-what-it-says":
-  case "do":
-    result = console.log("do it")
     break;
 
     default:
